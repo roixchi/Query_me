@@ -4,7 +4,7 @@ import java.sql.SQLException;
 
 public class conn {
     // 10. Check your connection here...
-    private static final String URL = "jdbc:mysql://localhost:3307/finals";
+    private static final String URL = "jdbc:mysql://localhost:3306/finals";
     private static final String USER = "root";
     private static final String PASSWORD = "root";
 
