@@ -38,10 +38,6 @@ public class User {
             Connection con = conn.getConnection();  
             // 2. Add a query here. easy query so far...
             String query = "SELECT users.id, users.username, user_credentials.first_name, user_credentials.last_name FROM users JOIN user_credentials ON users.id = user_credentials.user_id";
-            query = "INSERT INTO users (username, password) VALUES (?, ?)";
-            String newQuery = "INSERT INTO user_credentials (user_id, first_name, last_name) VALUES (?, ?, ?)";
-            String credQuery = "UPDATE user_credentials SET first_name = ?, last_name = ? WHERE user_id = ?";
-
             ResultSet res = con.prepareStatement(query).executeQuery();
             while (res.next()) {
                 System.out.print("User ID: " + res.getInt("id"));
